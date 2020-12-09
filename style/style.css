@@ -1,12 +1,15 @@
 *{
     box-sizing: border-box;
-    font-family: 'Montserrat', Lato, open-sans;
+    font-family: var(--font-m), Lato, open-sans;
     padding: 0;
     margin: 0;
 }
 :root{
     --blue-color: #2985d8;
     --text-color: #434343;
+    --font-m: 'Montserrat';
+    --font-l: 'Lato';
+    --font-r: 'Roboto';
 }
 p{
     margin:0 !important;
@@ -54,12 +57,12 @@ p{
     outline: 0 none;
 }
 .login_fields .field_design::placeholder{
-    font-family: 'Lato';
+    font-family: var(--font-l);
     font-size: 14px;
 }
 .login_fields .forgot_password a{
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: var(--font-m);
     font-size: 14px;
     color:#fff;
     text-decoration: none;
@@ -68,7 +71,7 @@ p{
     border-radius: 0;
     border:1px solid #fff;
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: var(--font-m);
     color:#fff;
     width: 110px;
     height: 48px;
@@ -111,7 +114,7 @@ p{
     color: #434343;
     text-decoration: none;
     font-size: 14px;
-    font-family: 'Lato';
+    font-family: var(--font-l);
     text-transform: uppercase;
     display: block;
     cursor: pointer;
@@ -143,7 +146,7 @@ p{
     text-transform: uppercase;
     padding: 10px 20px;
     text-decoration: none;
-    font-family: 'lato';
+    font-family: var(--font-l);
     font-size: 14px;
     color:#434343;
 }
@@ -207,7 +210,7 @@ header .header_content{
     height: 100%;
 }
 .header_text h3{
-    font-family: 'Montserrat';
+    font-family: var(--font-m);
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
@@ -215,7 +218,7 @@ header .header_content{
     padding-bottom: 20px;
 }
 .header_text h1{
-    font-family: 'Montserrat';
+    font-family: var(--font-m);
     font-size: 49px;
     font-weight: 800;
     text-transform: capitalize;
@@ -223,7 +226,7 @@ header .header_content{
     padding-bottom: 20px;
 }
 .header_text p{
-    font-family: 'Montserrat';
+    font-family: var(--font-m);
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
@@ -231,7 +234,7 @@ header .header_content{
     padding-bottom: 40px;
 }
 .header_content .read_more{
-    font-family: 'Lato';
+    font-family: var(--font-l);
     background-color: var(--blue-color);
     color:#ffffff;
     width: 165px;
@@ -246,8 +249,179 @@ header .header_content{
     text-align: right;
     width: 40%;
 }
+.header_img img{
+    display: block;
+}
+
+/* services*/
+.services_appointment{
+    display: flex;
+    flex-direction: row;
+}
+.services{
+    padding:70px 0 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.services> div{
+    flex: 1 0 30%;
+    height: 235px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 10px 0;
+}
+.services > .spcl_health, .services > .spcl_chk{
+    margin: 0 30px 0 0;
+}
+.services > .op_section, .services > .dt_op{
+    margin-bottom: 0 ;
+}
+.service .serv_img{
+    padding: 0 0 20px;
+    position: relative;
+    height: 68px;
+}
+.service .serv_img:after{
+    content:' ';
+    width: 37px;
+    height: 1px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-bottom: 1px solid var(--blue-color);
+    visibility: visible;
+}
+.service p{
+    padding: 20px 0 0;
+    font-family: var(--font-m);
+    font-weight: 400;
+    font-size: 16px;
+    color:var(--text-color);
+}
+.services> div:hover{
+    background-color: var(--blue-color);
+}
+.services> div:hover p{
+    color: #fff;
+}
+.services .serv_img .on_hover{
+    display: none;
+}
+.services> div:hover .non_hover{
+    display: none;
+}
+.services> div:hover .on_hover{
+    display: block;
+}
+.services> div:hover .serv_img:after{
+    border-bottom: 1px solid #fff;
+}
+
+.appointment{
+    background-color: var(--blue-color);
+    padding:60px 30px 56px;
+    width: 30%;
+}
+.appointment h3{
+    color:#fff;
+    font-family: var(--font-m);
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding:0 0 15px;
+    text-align: center;
+}
+.appointment p, .appointment .terms{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: var(--font-l);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 28px;
+}
+.appointment .terms{
+    text-transform: initial;
+    text-align: left;
+    margin-bottom: 15px !important;
+    padding: 0;
+}
+.appointment_form select, .appointment_date, .appointment_time{
+    height: 45px;
+    padding:0 15px;
+    width: 100%;
+    color:var(--text-color);
+    font-weight: 400;
+    font-family: var(--font-l);
+    border:0 none;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.appointment_form select:focus, .appointment_date:focus{
+    outline: 0 none;
+}
+.appointment_form select:invalid, .appointment_date:focus{
+    color: #cacaca;
+    font-weight: normal;
+}
+.appointment_form .select{
+    position: relative;
+    margin-bottom: 10px;
+}
+.appointment_form .select.time_select{
+    margin-bottom: 15px;
+}
+.appointment_form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.appointment_form .drop_select:after{
+    font-family: 'FontAwesome';
+    content: '\f0d7';
+    visibility: visible;
+    display: inline-block;
+    font-weight: 900;
+    position: absolute;
+    top:50%;
+    right: 20px;
+    transform: translate(50%,-50%);
+    color: #cacaca;
+}
+.appointment_date::before, .appointment_time::before {
+    content: attr(placeholder) !important;
+    color: #cacaca;
+    margin-right: 0.5em;
+    width: 100%;
+}
+.appointment_date:valid:before, .appointment_time:valid::before {
+    content: "";
+    display: none;
+}
+.appointment_submit{
+    display: block;
+    height: 48px;
+    border:1px solid #fff;
+    color:#fff;
+    background-color: var(--blue-color);
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-family: var(--font-m);
+    font-size: 14px;
+    font-weight: 400;
+}
+.appointment_submit:focus{
+    outline: 0 none;
+}
 /*media queries begin*/
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 576px) {
     .clearfix::after{
         visibility: hidden;
         display: block;
@@ -319,6 +493,16 @@ header .header_content{
     header .header_content .header_img img{
         width: 200px !important;
     }
+    .services_appointment {
+        flex-direction: column;
+    }
+    .services, .appointment {
+        width: 100%;
+    }
+    .services> div {
+        flex: 1 0 100%;
+        margin: 0 0 10px 0 !important;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -356,6 +540,16 @@ header .header_content{
     header .header_content .header_img img{
         width: 100% !important;
     }
+    .services_appointment {
+        flex-direction: column;
+    }
+    .services, .appointment {
+        width: 100%;
+    }
+    .services> div {
+        flex: 1 0 48%;
+        margin: 0 10px 10px 0 !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -382,6 +576,15 @@ header .header_content{
     }
     header .header_content .header_img img{
         width: 100% !important;
+    }
+    .service p{
+        font-size: 12px;
+    }
+    .appointment .terms {
+        font-size: 11px;
+    }
+    .appointment_submit{
+        font-size: 10px;
     }
 }
 
