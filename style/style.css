@@ -490,6 +490,104 @@ header .header_content{
     font-size: 14px;
     color: var(--text-color);
 }
+
+/* test logo section */
+.logo_section{
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+.logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logos > .item{
+    flex: 1 0 25%;
+}
+
+/* footer */
+footer.cuscontainer-fluid{
+    background-color: #0d1c26;
+    border-top: 2px solid var(--blue-color);
+    padding-top: 80px;
+    padding-bottom:60px;
+}
+.footer_main{
+    display: flex;
+    flex-direction: row;
+}
+.logo_social{
+    margin-right: 50px;
+}
+.logo_social img.logo{
+    display: block;
+    margin-bottom: 40px;
+}
+.logo_social .logo_text{
+    font-family: var(--font-l);
+    font-weight: 400;
+    color:#fff;
+    font-size: 14px;
+    padding-bottom: 35px;
+}
+.logo_social img.sign{
+    margin-bottom: 10px;
+}
+.logo_social .social_icons{
+    display: flex;
+    flex-direction: row;
+}
+.social_icons .item{
+    margin-right: 15px;
+}
+.quick_links{
+    margin-right: 67px;
+}
+.quick_links h4, .contact_us h4, .working_hours h4{
+    font-family: var(--font-m);
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+.quick_links span, .contact_us span, .working_hours span{
+    color: var(--blue-color);
+}
+.quick_links p{
+    margin:0 0 20px 0 !important;
+}
+.contact_us p{
+    margin:0 0 30px 0 !important;
+}
+.quick_links p a, .contact_us p a, .working_hours p{
+    text-decoration: none;
+    color:#fff;
+    font-family: var(--font-l);
+    font-size: 14px;
+}
+.quick_links p a.active{
+    text-decoration: none;
+    color:var(--blue-color);
+    font-family: var(--font-l);
+    font-size: 14px;
+}
+.quick_links p i{
+    color:var(--blue-color);
+    font-size: 9px;
+}
+.contact_us p i{
+    color:var(--blue-color);
+    font-size: 14px;
+}
+.contact_us{
+    margin-right: 50px;
+}
+.working_hours p{
+
+}
 /*media queries begin*/
 @media (min-width: 320px) and (max-width: 576px) {
     .clearfix::after{
@@ -596,6 +694,15 @@ header .header_content{
     }
     .video_pane img{
         width: 100%;
+    }    
+    .logos{
+        flex-direction: column;
+    }   
+    .logos .item{
+        margin-bottom: 15px;
+    }  
+    .logos .item:last-child{
+        margin-bottom: 0px;
     }
 }
 
@@ -667,6 +774,15 @@ header .header_content{
     }
     .video_pane img{
         width: 100%;
+    }    
+    .logos{
+        flex-direction: column;
+    }   
+    .logos .item{
+        margin-bottom: 15px;
+    }  
+    .logos .item:last-child{
+        margin-bottom: 0px;
     }
 }
 
